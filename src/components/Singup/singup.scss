@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+#wrap {
+  max-width: 1300px;
+  width: calc(100% - 60px);
+  background-color: #262626;
+  padding: 0 15px 15px 15px;
+  margin: 0 auto;
+  font-family: Noto Sans;
+  color: #cccccc;
+  overflow: hidden;
+  span {
+    color: red;
+  }
+}
+
+#container {
+  display: grid;
+  grid-template-columns: minmax(500px, 60%) 40%;
+  grid-template-rows: 1fr;
+}
+
+#singup {
+  color: #cccccc;
+  font-family: Oswald;
+  font-size: 28px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+#lock {
+  align-self: end;
+  margin: 0 20px 8px;
+  height: 15px;
+  width: 15px;
+}
+
+#singup__form {
+}
+
+#reg__cont {
+  grid-row-start: 1;
+  line-height: 30px;
+}
+
+#welcome__text {
+  // grid-area: "rightBar";
+  grid-column-start: 2;
+  grid-column-end: 2;
+  align-self: start;
+
+  font-family: Oswald;
+  font-size: 14px;
+  background-color: #333333;
+  padding: 15px;
+  margin: 10px 0 10px 0;
+  p {
+    line-height: 25px;
+    font-weight: 500;
+    font-family: Noto Sans;
+    font-style: 12px;
+  }
+}
+
+#reg__cont {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#frm__row {
+  display: flex;
+}
+
+#frm__cell {
+  width: 135px;
+}
+
+@media screen and (max-width: 975px) {
+  #container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  #welcome__text {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #reg__cont {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  #frm__row {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #wrap {
+    width: 100%;
+  }
+}

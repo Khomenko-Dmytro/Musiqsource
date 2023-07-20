@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+$bg_color_side_main_header_footer: #262626;
+
+.grid__cont {
+  white-space: nowrap;
+  vertical-align: top;
+  background-color: $bg_color_side_main_header_footer;
+  position: relative;
+  margin: 0 0 0 15px;
+  overflow: hidden;
+  z-index: 99;
+}
+
+.top__ten {
+  width: 100%;
+  height: 70px;
+  overflow: hidden;
+  border-bottom: 1px solid black;
+
+  font-size: 25px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.83);
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: Oswald;
+
+  span {
+    color: grey;
+  }
+}
+
+.item {
+  border-bottom: 1px solid black;
+  color: rgba(255, 255, 255, 0.83);
+  display: flex;
+}
+
+.position {
+  width: 27px;
+  font-family: Oswald;
+  font-weight: 500;
+  font-size: 20pt;
+  color: #999;
+  line-height: 270%;
+  justify-content: center;
+  padding-left: 5px;
+}
+
+.image {
+  width: 52px;
+  margin: 0 4px;
+  position: relative;
+  img {
+    width: 100%;
+    max-width: 52px;
+    cursor: pointer;
+  }
+  .fly__btn {
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    background-color: $bg_color_side_main_header_footer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  .play__now,
+  .play__next {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.info {
+  width: calc(100% - 122px);
+  padding-left: 2px;
+  overflow: hidden;
+
+  font-family: Noto Sans;
+  font-size: 13.3px;
+  line-height: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+
+  .artist,
+  .label {
+    color: grey;
+  }
+}
+
+.artist:hover,
+.label:hover,
+.title:hover,
+.play__now:hover,
+.play__next:hover {
+  color: rgb(0, 162, 255);
+}
+
+.btn,
+.artist,
+.title,
+.label,
+.position,
+.image {
+  display: flex;
+  align-items: center;
+}
+
+.dots {
+  cursor: pointer;
+  opacity: 0.7;
+  font-size: 25px;
+  border-left: 1px dashed #111;
+  height: 70px;
+}
+
+.topTenTab {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: #f6f6f6;
+  font-size: 15px;
+  font-family: Noto Sans;
+
+  a {
+    width: 25%;
+    text-align: center;
+    line-height: 32px;
+    color: white;
+    text-decoration: none;
+
+    &:hover {
+      background-color: rgb(31, 140, 249);
+    }
+  }
+  a + a {
+    border-left: 1px solid #111;
+  }
+  .active {
+    background-color: #383838;
+
+    &:hover {
+      background-color: #383838;
+    }
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .grid__cont {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .grid__cont {
+    margin: 25px 0 0 0;
+  }
+}

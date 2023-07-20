@@ -1,0 +1,90 @@
+.container__slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    // z-index: 200;
+    visibility: hidden;
+    transition: ease-in-out 0.4s;
+  }
+
+  .slide__anim {
+    // z-index: 300;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: visible;
+    transition: ease-in-out 0.4s;
+    opacity: 1;
+  }
+}
+
+.btn__slide {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 15px 0;
+  width: 36px;
+  height: 36px;
+
+  position: absolute;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(0, 162, 255);
+  }
+}
+
+.left {
+  top: 42.5%;
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.right {
+  top: 42.5%;
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.container__dots {
+  width: calc(100% - 12px);
+  margin: 0;
+  padding: 0 3px;
+  position: absolute;
+  bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+  opacity: 0.8;
+
+  .dot {
+    width: 5%;
+    height: 15px;
+    background: #777;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+    margin-left: 5px;
+    border-radius: 1px;
+    flex-grow: 1;
+  }
+
+  .dot__active {
+    width: 5%;
+    height: 15px;
+    background: #777;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0;
+    margin-left: 5px;
+    border-radius: 1px;
+    flex-grow: 1;
+    background-color: #1c7ad8;
+  }
+}

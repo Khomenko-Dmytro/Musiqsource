@@ -1,0 +1,256 @@
+.container {
+  background-color: #171717;
+  width: 100%;
+  height: 63px;
+  position: fixed;
+  z-index: 1800;
+  padding: 0 15px 0 15px;
+  border-bottom: 2px solid #000;
+  transition: height 0.3s, top 0.3s;
+}
+
+.title {
+  color: #f6f6f6;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.navigation__wrapper {
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 58px;
+  position: relative;
+  /* top: 5px; */
+}
+.btn__prev {
+}
+.btn__pp {
+  font-size: 32px;
+}
+
+.btn__next {
+}
+
+.btn__next,
+.btn__pp,
+.btn__prev {
+  color: white;
+  cursor: pointer;
+}
+
+.btn__next,
+.btn__prev {
+  margin: 0 5px 0 5px;
+  font-size: 22px;
+}
+
+.progress {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid #333;
+  // width: calc(100% - 125px);
+  height: 52px;
+  margin-top: 5px;
+  width: 45%;
+  transition: width 0.2s;
+}
+
+//player changes
+.progress__fscr {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+  border: 1px solid #333;
+  // width: calc(100% - 125px);
+  height: 52px;
+  margin-top: 5px;
+  width: calc(100%);
+  transition: width 0.2s;
+}
+
+#waveform {
+  width: 100%;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.seek__bar {
+  background: linear-gradient(
+    to right,
+    rgb(12, 126, 255) 0%,
+    rgb(185, 183, 183) 80%
+  );
+  height: 100%;
+  width: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  -webkit-transition: display 0.3s;
+  transition: display 0.3s;
+  /* width: calc(100% - 200px); */
+  /* flex: auto 1 0; */
+  overflow: hidden;
+  flex-basis: 45%;
+}
+
+//info changes
+.track__fscr {
+  display: none;
+}
+
+.img {
+  width: 52px;
+  margin-right: 5px;
+  margin-top: 5px;
+  img {
+    width: 100%;
+    max-width: 52px;
+    cursor: pointer;
+    align-self: center;
+  }
+}
+
+.volume {
+  color: aliceblue;
+  font-size: 25px;
+  display: flex;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+}
+//volume changes
+.volume__fscr {
+  color: aliceblue;
+  font-size: 25px;
+  display: flex;
+  padding: 0 0 0 10px;
+  cursor: pointer;
+  // margin-right: 75px;
+}
+
+.title,
+.artist,
+.label {
+  font-size: 14.5px;
+  line-height: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist,
+.label {
+  color: #999;
+}
+
+@media screen and (max-width: 635px) {
+  .track {
+    display: none;
+  }
+  .progress {
+    // height: 40px;
+    width: calc(78% - 8px);
+    border: 1px solid #333;
+    border-width: 0 1px;
+    align-self: flex-end;
+  }
+  .btn__next,
+  .btn__prev {
+    display: none;
+  }
+  .controls {
+    width: 50px;
+  }
+  .volume {
+    display: none;
+  }
+}
+
+.playlist__btn {
+  justify-self: end;
+  color: white;
+  font-size: 25px;
+  margin: 0 15px 0 0;
+  width: 10%;
+  cursor: pointer;
+  justify-self: end;
+  // position: absolute;
+  // right: 0.1%;
+  &:hover {
+    color: rgb(70, 148, 236);
+  }
+}
+
+// @media screen and (min-width: 635px) {
+//   .playlist {
+//   }
+// }
+
+.volume {
+  position: relative;
+}
+.vol__control {
+  position: absolute;
+  left: -60px;
+  top: -5px;
+
+  margin: 0 auto;
+  z-index: 3000;
+  /* padding: 2px; */
+  padding: 2px 15px 2px 15px;
+  background-color: black;
+  border: 1.7px solid rgba(169, 168, 168, 0.646);
+  border-radius: 5px;
+}
+//vol__control changes
+.vol__control_fscr {
+  position: absolute;
+  // left: -60px;
+  // top: -5px;
+  right: 70px;
+  top: 13px;
+  margin: 0 auto;
+  z-index: 3000;
+  /* padding: 2px; */
+  padding: 2px 15px 2px 15px;
+  background-color: black;
+  border: 1.7px solid rgba(169, 168, 168, 0.646);
+  border-radius: 5px;
+}
+
+.volume input[type="range"] {
+  -webkit-appearance: none;
+  /* display: flex; */
+  position: relative;
+  width: 110px;
+  top: -8px;
+  height: 2px;
+  background: rgb(195, 193, 193);
+  border: none;
+  outline: none;
+}
+
+.volume input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: rgb(70, 148, 236);
+
+  border-radius: 50%;
+}
+// ______________________________________________________
+.playlist__container {
+  position: absolute;
+}

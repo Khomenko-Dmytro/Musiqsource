@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+.wrapper {
+  position: fixed;
+  // inset: 0px;
+  top: 50px;
+  z-index: 2000;
+  background-color: rgba(10, 11, 13, 0.6);
+  display: flex;
+  // align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
+  color: #cccccc;
+  font-family: Noto sans;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.wrapper__top {
+  position: fixed;
+  // inset: 0px;
+  top: 115px;
+  z-index: 2000;
+  background-color: rgba(10, 11, 13, 0.6);
+  display: flex;
+  // align-items: start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 150px;
+  color: #cccccc;
+  font-family: Noto sans;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.window {
+  background-color: white;
+  width: 60%;
+  max-width: 600px;
+  height: 320px;
+  overflow-y: auto;
+  background-color: #171717;
+  box-shadow: 0px 1px 18px 5px #000;
+}
+
+@media screen and (max-width: 975px) {
+  .window {
+    width: 50%;
+    max-width: 330px;
+    height: 400px;
+    min-width: 290px;
+  }
+  .singup__cont {
+    margin-top: 20px;
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  flex-wrap: wrap;
+
+  h1 {
+    font-size: 24px;
+    font-family: Oswald;
+    font-weight: 500;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+}
+
+.lock__title {
+  display: flex;
+
+  & .lock {
+    align-self: flex-end;
+    margin-right: 5px;
+    padding-bottom: 8px;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.login__btn,
+.singup__btn {
+  padding: 10px;
+  border-radius: 3px;
+  border: 0;
+  background: #1c7ad8;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login__btn:hover,
+.singup__btn:hover {
+  background-color: #50a7ff;
+}
+.singup__subtitle {
+  margin-bottom: 5px;
+}
+
+.cancel {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #911;
+  color: white;
+  width: 25px;
+
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(190, 25, 25);
+  }
+}

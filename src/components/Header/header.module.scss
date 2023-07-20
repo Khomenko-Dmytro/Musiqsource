@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #262626;
+  box-shadow: 0 5px 5px 1px black;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* align-items: center; */
+  color: white;
+  height: 50px;
+  position: relative;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-right: 15px;
+  // overflow: hidden;
+}
+
+.logo,
+.logo__small {
+  color: rgba(255, 255, 255, 0.83);
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  align-items: center;
+  flex: 400px 1 0;
+  margin-left: 15px;
+  display: flex;
+
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  // background-image: url("../../../musiqsource-logo.png");
+
+  img {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+  }
+}
+
+.search {
+  border-left: 1px solid rgba(128, 128, 128, 0.15);
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 221px;
+  position: relative;
+
+  input {
+    border-radius: 4px;
+    border: none;
+    height: 25px;
+    width: 170px;
+    background-color: #262626;
+    color: white;
+    margin-left: 10px;
+  }
+}
+
+.autocomplete {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  background-color: #262626;
+  list-style: none;
+  /* line-height: 20px; */
+  max-height: 240px;
+  height: auto;
+  overflow: auto;
+  z-index: 222;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.autocomplete__item {
+  padding: 3px;
+  color: white;
+
+  &:hover {
+    background-color: rgb(31, 140, 249);
+    cursor: pointer;
+  }
+}
+
+.icon {
+  color: orange;
+  font-size: 22px;
+  align-self: flex-end;
+}
+
+.search__small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgba(128, 128, 128, 0.15);
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.menu__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid rgba(128, 128, 128, 0.15);
+  padding: 10px 20px 10px 20px;
+  font-size: 23px;
+  color: rgba(255, 255, 255, 0.83);
+}
+
+.login,
+.singup {
+  border-left: 1px solid rgba(128, 128, 128, 0.15);
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 500;
+  font-size: 15px;
+
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    background-color: rgb(31, 140, 249);
+    cursor: pointer;
+  }
+}
+
+.burger__list {
+  position: absolute;
+  top: 52px;
+  width: calc(100% + 15px);
+  height: 200px;
+  background-color: #262626;
+  z-index: 1;
+  transition: height 0.2s;
+  border-bottom: 3px solid #000;
+  box-shadow: 0 6px 5px #000;
+  list-style-type: none;
+  overflow: hidden;
+  // white-space: nowrap;
+}
+
+.burger__list_unvisible {
+  position: absolute;
+  top: 52px;
+  width: 100%;
+  height: 0;
+  background-color: #262626;
+  // z-index: 3000;
+  transition: height 0.2s;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 708px) {
+  .search__small {
+    display: none;
+  }
+  .menu__btn {
+    display: none;
+  }
+
+  .burger__list {
+    height: 0;
+    // display: none;
+  }
+}
+.cancel {
+  display: none;
+  border-left: 1px solid #333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 301;
+}
+
+@media screen and (max-width: 707px) {
+  .login,
+  .singup {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .search {
+    position: absolute;
+    top: -45px;
+    right: 90px;
+    z-index: 300;
+    width: calc(100% - 470px);
+  }
+  .cancel {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  // .login,
+  // .singup {
+  //   display: none;
+  // }
+  .login,
+  .singup {
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .logo__text {
+    font-size: 19px;
+  }
+  .logo {
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 450px) {
+  // .logo {
+  //   width: 35px;
+  //   height: 35px;
+  // }
+}
+@media screen and (max-width: 450px) {
+  .logo__text {
+    display: none;
+  }
+  .logo {
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

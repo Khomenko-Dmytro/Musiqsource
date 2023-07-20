@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+.bottom__bay {
+  // top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #262626;
+  // margin-top: 80px;
+  z-index: 1000;
+}
+
+.bottom__separator {
+  height: 20px;
+  background-color: #2e2e2e;
+  border-bottom: 1px solid #000;
+}
+
+.bottom__cont {
+  max-width: 1370px;
+  margin: 20px auto;
+  padding-right: 15px;
+  font-size: 11pt;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+
+  & .sect__hdr {
+    margin-bottom: 9px;
+    color: #40a0ff;
+    font-family: Oswald;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  & .co {
+    font-size: 12px;
+    color: #cccccc;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .bottom__cont {
+    max-width: 780px;
+  }
+}
